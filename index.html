@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>CT Insider</title>
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <a href="index.html" class="home-link">
+      <img src="./imgs/ct-insider-logo-removed.png" class="logo">
+    </a>
+    <nav>
+      <ul>
+        <li>
+          <div class="search-wrapper">
+            <input type="text" id="filtro" placeholder="Pesquisar...">
+          </div>
+        </li>
+        <li>
+          <a href="#" id="nome-usuario" style="display: flex; align-items: center; gap: 10px;">
+            <span id="nome-texto">Login</span>
+            <img id="icone-usuario" src="./imgs/user-icon-template.jpg" alt="Usuário" style="width:60px; height: 60px; border-radius: 50%; display: none;">
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <!-- Conteúdo principal -->
+    <!-- <div class="img-principal-noticia">
+    <h1 class="titulo-noticia">[NOTICIA]</h1>
+  </div> 
+  isso é pra colocar dps caso a gente queira colocar um noticia grande em cima na pag-->
+    <div class="container-noticias">
+      <a href="pags/noticias/template.html" class="noticia" data-tags="Donnarumma PSG">
+        <div class="thumb"></div>
+        <!-- <img src="imgs/noticias/donar.jpg"> -->
+        Donnarumma fala sobre momento do PSG desde saída de Mbappé: 'Somos uma equipe melhor'
+      </a>
+
+      <a href="#" class="noticia" data-tags="Premier League">
+        <img src="imgs/noticias/2.jpg">
+        Premier League Classificação
+      </a>
+
+      <a href="#" class="noticia" data-tags="Final Champions">
+        <img src="imgs/noticias/3.jpg">
+        Final Da Champions
+      </a>
+
+      <a href="#" class="noticia" data-tags="Sommer Inter">
+        <img src="imgs/noticias/4.jpg">
+        Paredão histórico: Sommer, da Inter de Milão, brilhou contra o Barcelona na Champions
+      </a>
+
+      <a href="#" class="noticia" data-tags="Cristiano Ronaldo">
+        <img src="imgs/noticias/cr.jpg">
+        Cristiano Ronaldo
+      </a>
+
+      <a href="#" class="noticia" data-tags="CT palpite">
+        <img src="imgs/noticias/6.jpg">
+        Palpites do CT: -----
+      </a>
+
+      <a href="#" class="noticia" data-tags="Artilheiros Champions">
+        <img src="imgs/noticias/7.jpg">
+        Artilheiros da Champions League 2024/25: veja ranking atualizado
+      </a>
+
+      <a href="#" class="noticia" data-tags="Crystal Palace">
+        <img src="imgs/noticias/crysta.jpg">
+        Crystal Palace conquista primeiro grande título de sua história em cima do Manchester City
+      </a>
+    </div>
+  </main>
+
+  <!-- Rodapé (mudar depois, COLOCAR IMG DE IA NOS ICONS) -->
+  <footer>
+    <div class="redes-sociais">
+      <nav>
+        <ul>
+          <li>
+            <a href="https://instagram.com"><img src="./imgs/icons/insta.png"></a>
+          </li>
+          <li>
+            <a href="https://youtube.com"><img src="./imgs/icons/yt.svg" style="height: 45px; width: 60px;"></a>
+          </li>
+          <li>
+            <a href=" https://twitch.tv"><img src="./imgs/icons/twitch.png"></a>
+          </li>
+          <li><a href="https://tiktok.com"><img src="./imgs/icons/ttk.png"></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <p>&copy; Copyright 2000-2025 CT Insider.</p>
+  </footer>
+  <!-- Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const filtro = document.getElementById('filtro');
+      const noticias = document.querySelectorAll('.noticia');
+
+      function normalizarTexto(texto) {
+        return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+      }
+
+      filtro.addEventListener('input', function () {
+        const termo = normalizarTexto(this.value);
+        let visibleCount = 0;
+
+        noticias.forEach((noticia, index) => {
+          const texto = normalizarTexto(noticia.textContent);
+          const tags = normalizarTexto(noticia.getAttribute('data-tags'));
+
+          if (texto.includes(termo) || tags.includes(termo)) {
+            noticia.classList.remove('hidden');
+            noticia.style.order = visibleCount < 2 ? 1 : 2;
+            visibleCount++;
+          } else {
+            noticia.classList.add('hidden');
+            noticia.style.order = 2;
+          }
+        });
+
+        document.querySelectorAll('.noticia:not(.hidden)').forEach((noticia, index) => {
+          noticia.style.order = index < 2 ? 1 : 2;
+        });
+      });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const nomeUsuarioLink = document.getElementById('nome-usuario');
+      const iconeUsuario = document.getElementById('icone-usuario');
+      const nomeTexto = document.getElementById('nome-texto');
+
+      function atualizarMenu() {
+        const nomeSalvo = localStorage.getItem('nome');
+
+        if (nomeSalvo) {
+          nomeTexto.textContent = nomeSalvo;
+          iconeUsuario.style.display = 'inline-block';
+        } else {
+          nomeTexto.textContent = 'Login';
+          iconeUsuario.style.display = 'none';
+        }
+      }
+
+      atualizarMenu(); // Atualiza ao carregar a página
+
+      nomeUsuarioLink.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        const nomeSalvo = localStorage.getItem('nome');
+
+        if (nomeSalvo) {
+          window.location.href = 'pags/conta.html';
+        } else {
+          window.location.href = 'pags/forms/login.html';
+        }
+      });
+    });
+
+  </script>
+</body>
+
+</html>

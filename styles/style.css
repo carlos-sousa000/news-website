@@ -1,0 +1,222 @@
+/*  
+RESETS, VAR E BODY
+*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+body,
+html {
+  height: 100%;
+}
+:root {
+  --branco-principal-noticia: #f5faff;
+  /* ou #dcefff?? */
+  --branco-texto: #efe6dd;
+  --azul-principal: #0c4384;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* 
+HEADER
+*/
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: var(--branco-texto);
+}
+
+header {
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--azul-principal);
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+nav a {
+  font-size: 1.7rem;
+  padding: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.logo {
+  height: 180px;
+  width: 180px;
+}
+.logo,
+nav a,
+.search-wrapper {
+  transition: 0.3s;
+}
+nav a:hover {
+  transform: scale(1.1);
+}
+.logo:hover,
+.search-wrapper:hover {
+  transform: scale(1.05);
+}
+
+/*  */
+/* FILTRO */
+/*  */
+.search-wrapper {
+  position: relative;
+}
+
+#filtro {
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  width: 200px;
+  font-size: 1rem;
+  transition: width 0.3s;
+}
+
+#filtro:focus {
+  width: 240px;
+  outline: none;
+}
+
+.noticia.hidden {
+  opacity: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  order: 2;
+}
+
+/*  
+CONTEUDO
+*/
+main {
+  flex: 1;
+}
+
+/* .img-principal-noticia {
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+}
+
+.titulo-noticia {
+  font-size: 5rem;
+  color: var(--branco-texto);
+} */
+
+.container-noticias {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container-noticias a {
+  color: black;
+}
+
+.noticia {
+  box-sizing: border-box;
+  border: black 1px solid;
+  border-radius: 4px;
+  background-color: var(--branco-principal-noticia);
+  color: black;
+  text-align: center;
+  padding: 15px;
+  transition: all 0.3s ease;
+  order: 1;
+
+  font-size: 1.3rem;
+}
+.noticia:hover {
+  transform: scale(1.05);
+  text-decoration: underline;
+}
+
+.noticia img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 4px;
+  max-height: 200px;
+  margin-bottom: 1rem;
+}
+
+/* 
+FOOTER
+ */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--azul-principal);
+  color: var(--branco-texto);
+  font-size: 1.5rem;
+}
+footer p {
+  margin-top: 10px;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+.redes-sociais {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+footer nav a img {
+  transition: transform 0.3s;
+}
+footer nav a img:hover {
+  transform: scale(1.15);
+}
+
+footer nav a {
+  transition: transform 0.3s;
+}
+footer nav a:hover img {
+  transform: scale(1.12);
+}
+
+.thumb {
+  width: 100%;
+  height: 200px; /* defina a altura desejada */
+  background-image: url("../imgs/noticias/donar.jpg");
+  background-size: cover; /* cobre todo o espaço, cortando as sobras */
+  background-position: top; /* mostra o topo e centraliza horizontalmente */
+  background-repeat: no-repeat;
+  border-radius: 5px;
+}

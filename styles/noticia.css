@@ -1,0 +1,89 @@
+@import url("./style.css");
+/* HEADER */
+header {
+  margin-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.home-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+  color: var(--branco-principal);
+}
+.home-link span {
+  margin-top: 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+header .logo {
+  display: block;
+}
+
+/* CONTEUDO */
+article {
+  margin: 0 300px 0 300px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+article img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 4px;
+  max-height: 500px;
+  margin-bottom: 1rem;
+}
+
+.especificacao {
+  color: gray;
+  opacity: 80%;
+  left: 0px;
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+blockquote {
+  font-size: 1.4rem;
+}
+p,
+h1,
+blockquote {
+  margin-bottom: 2rem;
+}
+blockquote {
+  font-weight: bold;
+  position: relative;
+}
+blockquote::before {
+  content: "";
+  position: absolute;
+  background-color: grey;
+  height: 4px;
+  width: 100%;
+  top: -10px;
+  opacity: 70%;
+  /* left: 100px; */
+}
+blockquote::after {
+  content: "";
+  position: absolute;
+  background-color: gray;
+  opacity: 70%;
+  height: 4px;
+  width: 100%;
+  bottom: -10px;
+  /* left: 100px; */
+  left: 0;
+}

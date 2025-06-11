@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../styles/form.css">
+
+  <title>CT Insider</title>
+</head>
+
+<body>
+  <header style="text-align: center;">
+    <a href="../../index.html">
+
+      <img src="../../imgs/ct-insider-logo-removed.png" class="logo">
+      <!-- <span>Home</span> -->
+    </a>
+  </header>
+
+  <body>
+    <form action="#" method="post" id="form-login">
+      <legend>Cadastro</legend>
+
+      <label for="nome">Nome de usuário:</label><br>
+      <input type="text" id="nome" name="nome" inputmode="text" pattern="[A-Za-zÀ-ÿ\s]+" placeholder="Digite seu nome de usuário" required><br><br>
+
+      <label for="email">E-mail:</label><br>
+      <input type="email" id="email" name="email" placeholder="nome@email.com" required><br><br>
+
+      <label for="senha">Senha:</label><br>
+      <input type="password" id="senha" name="senha" placeholder="" required><br><br>
+      <input type="submit" value="Cadastrar">
+    </form>
+
+    <footer>
+      <div class="redes-sociais">
+        <nav>
+          <ul>
+            <li>
+              <a href="https://instagram.com"><img src="../../imgs/icons/insta.png"></a>
+            </li>
+            <li>
+              <a href="https://youtube.com"><img src="../../imgs/icons/yt.svg" style="height: 45px; width: 60px;"></a>
+            </li>
+            <li>
+              <a href=" https://twitch.tv"><img src="../../imgs/icons/twitch.png"></a>
+            </li>
+            <li><a href="https://tiktok.com"><img src="../../imgs/icons/ttk.png"></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <p>&copy; Copyright 2000-2025 CT Insider.</p>
+
+    </footer>
+
+    <script>
+      document.getElementById('form-login').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const nome = document.getElementById('nome').value.trim();
+
+        if (nome) {
+          localStorage.setItem('nome', nome);
+
+          window.location.href = '../../index.html';
+        } else {
+          alert('Por favor, digite um nome válido.');
+        }
+      });
+    </script>
+  </body>
+
+</html>
