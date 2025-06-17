@@ -1,0 +1,191 @@
+@import url("style.css");
+
+/* Layout Principal */
+.premier-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+.premierlogo {
+  width: 15%;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+/* Tabela */
+table {
+  width: 80%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  align-self: center;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+th {
+  background-color: #4d2171;
+  color: #fff;
+}
+
+.team-name,
+.time,
+.champions,
+.europa,
+.conference,
+.rebaixado {
+  text-align: left;
+  font-weight: 600;
+}
+
+.champions,
+.championsNUM {
+  color: dodgerblue;
+}
+
+.europa,
+.europaNUM {
+  color: orangered;
+}
+
+.conference,
+.conferenceNUM {
+  color: mediumseagreen;
+}
+
+.rebaixado,
+.rebaixadoNUM {
+  color: #f01010;
+}
+
+.championsNUM,
+.europaNUM,
+.conferenceNUM,
+.rebaixadoNUM {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Efeitos de Hover */
+table tr {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+table tr:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ededed;
+}
+
+table thead tr:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+tr.championsMOVIMENTO:hover {
+  background-color: rgb(92, 214, 231);
+}
+
+tr.europaMOVIMENTO:hover {
+  background-color: rgb(249, 187, 86);
+}
+
+tr.conferenceMOVIMENTO:hover {
+  background-color: rgb(146, 248, 175);
+}
+
+tr.rebaixadoMOVIMENTO:hover {
+  background-color: rgba(255, 0, 0, 0.6);
+  -webkit-text-stroke: 0.1px rgb(58, 58, 58);
+}
+
+/* Colunas Específicas */
+img {
+  width: 30px;
+}
+
+table tbody td:first-child,
+table thead th:first-child {
+  padding: 0 6px;
+  width: 40px;
+}
+
+table tbody td:nth-child(2),
+table thead th:nth-child(2) {
+  padding: 0 4px;
+  width: 40px;
+}
+
+table tbody td.time,
+table thead th.time {
+  padding: 0 12px 0 8px;
+}
+
+/* Legenda */
+.legenda {
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  color: #2c003e;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  align-self: center;
+}
+
+.legenda h3 {
+  text-align: center;
+  margin-bottom: 14px;
+  margin-top: 14px;
+}
+
+.linha-legenda {
+  display: flex;
+  gap: 32px;
+  margin-top: 8px;
+}
+
+.item-legenda {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cor {
+  width: 4px;
+  height: 24px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.legendachamp {
+  background-color: dodgerblue;
+}
+
+.legendaeuropa {
+  background-color: orangered;
+}
+
+.legendaconference {
+  background-color: seagreen;
+}
+
+.legendarebaixamento {
+  background-color: #ff1414;
+}
