@@ -36,13 +36,11 @@ html {
 HEADER
 */
 header {
-  min-height: 20%;
   display: flex;
   flex-direction: row;
   gap: 20px;
   align-items: center;
   justify-content: space-around;
-  /* justify-content: space-between; */
   background-color: var(--azul-principal);
   margin-bottom: 1rem;
 }
@@ -118,6 +116,14 @@ nav a:hover {
   margin: 0;
   overflow: hidden;
   order: 2;
+}
+/* TIRAR HOVER DO LOGIN */
+#nome-usuario.logado:hover {
+  transform: none !important;
+  cursor: default; /* opcional: muda o cursor para o padrão */
+}
+#nome-usuario:not(.logado) {
+  cursor: pointer;
 }
 
 /*  */
