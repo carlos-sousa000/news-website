@@ -17,6 +17,8 @@ html {
 }
 :root {
   --branco-principal-noticia: #f5faff;
+  --branco-quote: #f0f4fb;
+  --preto-quote: #222;
   /* ou #dcefff?? */
   --branco-texto: #efe6dd;
   --azul-principal: #0c4384;
@@ -31,16 +33,8 @@ html {
 /* 
 HEADER
 */
-a,
-a:visited,
-a:active {
-  text-decoration: none;
-  color: var(--branco-texto);
-}
-
 header {
-  min-height: 25%;
-
+  min-height: 20%;
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -48,6 +42,14 @@ header {
   justify-content: space-around;
   /* justify-content: space-between; */
   background-color: var(--azul-principal);
+  margin-bottom: 1rem;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: var(--branco-texto);
 }
 
 nav ul {
@@ -204,18 +206,24 @@ footer p {
   gap: 20px;
 }
 
-footer nav a img {
-  height: 45px;
-  width: 45px;
-  transition: transform 0.3s;
-}
 footer nav a img:hover {
   transform: scale(1.15);
 }
 
 footer nav a {
+  display: inline-block;
+  line-height: 0;
+  padding: 0;
+  margin: 0;
+  margin: 0 0.5rem 0 0.5rem;
+}
+footer nav a,
+footer nav a img {
+  height: 45px;
+  width: 45px;
   transition: transform 0.3s;
 }
+
 footer nav a:hover img {
   transform: scale(1.12);
 }

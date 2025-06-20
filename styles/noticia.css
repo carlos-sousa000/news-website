@@ -62,28 +62,24 @@ h1,
 blockquote {
   margin-bottom: 2rem;
 }
+
 blockquote {
-  font-weight: bold;
+  font-size: 1.4rem;
+  font-weight: 600;
   position: relative;
+  padding: 1rem 1.5rem;
+  border-left: 6px solid var(--azul-principal);
+  background-color: var(--branco-quote);
+  color: var(--preto-quote);
+  box-shadow: 2px 2px 8px rgba(12, 67, 132, 0.4);
+  border-radius: 6px;
 }
-blockquote::before {
-  content: "";
-  position: absolute;
-  background-color: grey;
-  height: 4px;
-  width: 100%;
-  top: -10px;
-  opacity: 70%;
-  /* left: 100px; */
-}
+
+blockquote::before,
 blockquote::after {
-  content: "";
-  position: absolute;
-  background-color: gray;
-  opacity: 70%;
-  height: 4px;
-  width: 100%;
-  bottom: -10px;
-  /* left: 100px; */
-  left: 0;
+  content: none;
+}
+
+section h2 {
+  margin-bottom: 1rem;
 }

@@ -1,6 +1,6 @@
 @import url("style.css");
 
-/* Layout Principal */
+/* Layout */
 .premier-titulo {
   display: flex;
   align-items: center;
@@ -24,7 +24,7 @@ h1 {
 table {
   width: 80%;
   border-collapse: collapse;
-  background-color: #fff;
+  background: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   overflow: hidden;
@@ -41,10 +41,11 @@ td {
 }
 
 th {
-  background-color: #4d2171;
+  background: #4d2171;
   color: #fff;
 }
 
+/* Alinhamento*/
 .team-name,
 .time,
 .champions,
@@ -55,26 +56,25 @@ th {
   font-weight: 600;
 }
 
+/* Cores por categoria */
 .champions,
 .championsNUM {
   color: dodgerblue;
 }
-
 .europa,
 .europaNUM {
   color: orangered;
 }
-
 .conference,
 .conferenceNUM {
   color: mediumseagreen;
 }
-
 .rebaixado,
 .rebaixadoNUM {
   color: #f01010;
 }
 
+/* Numéricos com alinhamento central */
 .championsNUM,
 .europaNUM,
 .conferenceNUM,
@@ -84,7 +84,7 @@ th {
   font-weight: 600;
 }
 
-/* Efeitos de Hover */
+/* Efeitos Hover para linhas */
 table tr {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -100,24 +100,22 @@ table thead tr:hover {
   box-shadow: none;
 }
 
+/* Hover com cor */
 tr.championsMOVIMENTO:hover {
   background-color: rgb(92, 214, 231);
 }
-
 tr.europaMOVIMENTO:hover {
   background-color: rgb(249, 187, 86);
 }
-
 tr.conferenceMOVIMENTO:hover {
   background-color: rgb(146, 248, 175);
 }
-
 tr.rebaixadoMOVIMENTO:hover {
   background-color: rgba(255, 0, 0, 0.6);
   -webkit-text-stroke: 0.1px rgb(58, 58, 58);
 }
 
-/* Colunas Específicas */
+/* Colunas específicas */
 img {
   width: 30px;
 }
@@ -147,18 +145,18 @@ table thead th.time {
   color: #2c003e;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
   align-self: center;
+  text-align: center;
 }
 
 .legenda h3 {
-  text-align: center;
-  margin-bottom: 14px;
-  margin-top: 14px;
+  margin: 14px 0;
 }
 
 .linha-legenda {
   display: flex;
   gap: 32px;
   margin-top: 8px;
+  justify-content: center;
 }
 
 .item-legenda {
@@ -174,18 +172,16 @@ table thead th.time {
   display: inline-block;
 }
 
+/* Cores legenda */
 .legendachamp {
   background-color: dodgerblue;
 }
-
 .legendaeuropa {
   background-color: orangered;
 }
-
 .legendaconference {
   background-color: seagreen;
 }
-
 .legendarebaixamento {
   background-color: #ff1414;
 }
