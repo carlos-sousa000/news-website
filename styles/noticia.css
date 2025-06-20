@@ -25,8 +25,14 @@ header .logo {
 }
 
 /* CONTEUDO */
+.conteudo-principal {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
 article {
-  margin: 0 300px 0 300px;
+  margin: 0 2rem 0 2rem;
 }
 
 h1 {
@@ -93,4 +99,70 @@ video {
 .alinhar {
   display: flex;
   justify-content: center;
+}
+
+/* ASIDE */
+
+.outras-noticias {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-right: 3rem;
+  flex: 0 0 320px;
+}
+
+.outras-noticias h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.8);
+  margin-top: 3rem;
+  text-transform: uppercase;
+}
+
+/* ITENS */
+.item-ranking {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 1rem;
+  position: relative;
+}
+.item-ranking img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.item-ranking a.noticia {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Texto da notícia */
+.texto-ranking {
+  flex: 1;
+}
+
+.texto-ranking .categoria {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--azul-principal); /* roxo/rosa forte */
+  margin-bottom: 0.25rem;
+  display: inline-block;
+}
+
+.texto-ranking p {
+  font-size: 0.9rem;
+  color: #111;
+  margin: 0;
+  line-height: 1.4;
 }

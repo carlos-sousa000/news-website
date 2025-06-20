@@ -2,62 +2,94 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../styles/noticia.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../styles/noticia.css" />
   <title>Cristiano Ronaldo fala sobre futuro em meio à especulação no futebol brasileiro</title>
 </head>
 
 <body>
   <header>
     <a href="../../index.html">
-
-      <img src="../../imgs/ct-insider-logo-removed.png" class="logo">
-
+      <img src="../../imgs/ct-insider-logo-removed.png" class="logo" />
     </a>
   </header>
-  <article>
-    <h1>Cristiano Ronaldo fala sobre futuro em meio à especulação no futebol brasileiro</h1>
-    <p>
-      Atacante português abordou o tema na zona mista após vencer o título da Nations League por Portugal
-    </p>
-    <figure>
-      <img src="../../imgs/noticias/cr7.png">
-      <figcaption></figcaption>
-      <!-- legenda da img -->
-    </figure>
-    <p class="especificacao">Por Redação da CT Insider - 9 de junho · 18:42 hs</p>
-    <p>Cristiano Ronaldo tem seu futuro praticamente definido. Segundo as palavras do próprio jogador após o conquistar o título da Nations League com Portugal, sua carreira não deve mudar muito.</p>
-    <!--  -->
-    <!-- USAR ARTICLE E SECTION  -->
-    <!--  -->
-    <!-- blockquote se for citação longa, q se for citação pequena -->
-    <!-- não esquecer de mudar o footer -->
 
+  <!-- CONTEÚDO PRINCIPAL: ASIDE + ARTIGO -->
+  <div class="conteudo-principal">
+    <!-- MAIS VISTAS -->
+    <aside class="outras-noticias">
+      <h2>Outras notícias</h2>
 
-    <blockquote>"Praticamente não vai mudar nada. Sim (sobre provável permanência no Al-Nassr)", respondeu o jogador na zona mista.</blockquote>
+      <div class="item-ranking">
+        <a href="../noticias/crystal.html" class="noticia" data-tags="Final Champions">
+          <img src="../../imgs/noticias/crystal.jpg" alt="Notícia 1" />
+          <div class="texto-ranking">
+            <span class="categoria">FINAL DA FA CUP</span>
+            <p>Crystal Palace conquista primeiro grande título de sua história em cima do Manchester City</p>
+          </div>
+        </a>
+      </div>
 
+      <div class="item-ranking">
+        <a href="../noticias/foradosgramados.html" class="noticia" data-tags="Sommer Inter">
+          <img src="../../imgs/noticias/mudryk.png" alt="Notícia 2" />
+          <div class="texto-ranking">
+            <span class="categoria">MUDRYK FORA?</span>
+            <p>Atacante do Chelsea é acusado de doping e pode ficar quatro anos afastado dos gramados</p>
+          </div>
+        </a>
+      </div>
 
-    <p>Sem informações concretas sobre o futuro do camisa 7 até o momento, seu nome chegou a ser vinculado a clubes brasileiros. Botafogo, Flamengo, Fluminense e Palmeiras, times que disputam o Mundial de Clubes, chegaram a serem questionados sobre o interesse no Robozão.
+      <div class="item-ranking">
+        <a href="../noticias/raphinha.html" class="noticia" data-tags="Premier League Tabelas">
+          <img src="../../imgs/noticias/rapha.png" alt="Notícia 3" />
+          <div class="texto-ranking">
+            <span class="categoria destaque">RAPHINHA O MELHOR</span>
+            <p>Raphinha é eleito o melhor jogador do Campeonato Espanhol 2024/25</p>
+          </div>
+        </a>
+      </div>
+    </aside>
 
-    </p>
-  </article>
-  <!-- leia tbm??? -->
+    <!-- NOTÍCIA -->
+    <article>
+      <h1>Cristiano Ronaldo fala sobre futuro em meio à especulação no futebol brasileiro</h1>
+      <p>Atacante português abordou o tema na zona mista após vencer o título da Nations League por Portugal</p>
+
+      <figure>
+        <img src="../../imgs/noticias/cr7.png" alt="Cristiano Ronaldo" />
+        <figcaption></figcaption>
+      </figure>
+
+      <p class="especificacao">Por Redação da CT Insider - 9 de junho · 18:42 hs</p>
+
+      <p>
+        Cristiano Ronaldo tem seu futuro praticamente definido. Segundo as palavras do próprio jogador após conquistar o título da Nations League com Portugal, sua carreira não deve mudar muito.
+      </p>
+
+      <blockquote>
+        "Praticamente não vai mudar nada. Sim (sobre provável permanência no Al-Nassr)", respondeu o jogador na zona mista.
+      </blockquote>
+
+      <p>
+        Sem informações concretas sobre o futuro do camisa 7 até o momento, seu nome chegou a ser vinculado a clubes brasileiros. Botafogo, Flamengo, Fluminense e Palmeiras, times que disputam o Mundial de Clubes, chegaram a serem questionados sobre o interesse no Robozão.
+      </p>
+    </article>
+  </div>
+
+  <!-- MODAL -->
+  <div id="modal-container"></div>
+
+  <!-- FOOTER -->
   <footer>
     <div class="redes-sociais">
       <nav>
         <ul>
-          <li>
-            <a href="https://instagram.com"><img src="../../imgs/icons/insta.png"></a>
-          </li>
-          <li>
-            <a href="https://youtube.com"><img src="../../imgs/icons/yt.png"></a>
-          </li>
-          <li>
-            <a href=" https://twitch.tv"><img src="../../imgs/icons/twitch.png"></a>
-          </li>
-          <li><a href="https://tiktok.com"><img src="../../imgs/icons/ttk.png"></a>
-          </li>
+          <li><a href="https://instagram.com"><img src="../../imgs/icons/insta.png" alt="Instagram" /></a></li>
+          <li><a href="https://youtube.com"><img src="../../imgs/icons/yt.png" alt="YouTube" /></a></li>
+          <li><a href="https://twitch.tv"><img src="../../imgs/icons/twitch.png" alt="Twitch" /></a></li>
+          <li><a href="https://tiktok.com"><img src="../../imgs/icons/ttk.png" alt="TikTok" /></a></li>
         </ul>
       </nav>
     </div>

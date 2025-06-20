@@ -2,12 +2,16 @@
 
 const btnAbrir = document.getElementById("abrir-contato");
 const modalContainer = document.getElementById("modal-container");
+let path = window.location.pathname.includes("/pags/")
+  ? "/pags/forms/contato.html"
+  : "pags/forms/contato.html";
 
 btnAbrir.addEventListener("click", async () => {
   // Só carrega se ainda não foi carregado
   if (!document.getElementById("modal-contato")) {
     try {
-      const response = await fetch("./pags/contato.html");
+      // const response = await fetch("./pags/contato.html");
+      const response = await fetch(path);
       const html = await response.text();
       modalContainer.innerHTML = html;
 

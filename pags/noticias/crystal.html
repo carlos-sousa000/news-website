@@ -2,57 +2,95 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../styles/noticia.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../styles/noticia.css" />
   <title>Crystal Palace</title>
 </head>
 
 <body>
   <header>
     <a href="../../index.html">
-
-      <img src="../../imgs/ct-insider-logo-removed.png" class="logo">
-
+      <img src="../../imgs/ct-insider-logo-removed.png" class="logo" />
     </a>
   </header>
-  <article>
-    <h1>Crystal Palace conquista primeiro grande título de sua história em cima do Manchester City</h1>
-    <p>
-      Eze marca o gol da vitória em Wembley; goleiro Henderson brilha com defesas decisivas, incluindo um pênalti
-    </p>
-    <figure>
-      <img src="../../imgs/noticias/crystal.jpg">
-      <figcaption></figcaption>
-      <!-- legenda da img -->
-    </figure>
-    <p class="especificacao">Por Redação da CT Insider - 17 de Maio de 2025 · 15:15 hs</p>
-    <p>O Crystal Palace fez história sábado (17/05) ao conquistar seu primeiro título de elite ao derrotar o Manchester City por 1 a 0 na final da Copa da Inglaterra, realizada no estádio de Wembley. O gol da vitória foi marcado por Eberechi Eze aos 16 minutos do primeiro tempo, após cruzamento de Daniel Muñoz.</p>
-    <!--  -->
-    <!-- USAR ARTICLE E SECTION  -->
-    <!--  -->
-    <!-- blockquote se for citação longa, q se for citação pequena -->
-    <!-- não esquecer de mudar o footer -->
-    <p>O goleiro Dean Henderson foi o grande destaque da partida, realizando diversas defesas importantes, incluindo a defesa de um pênalti cobrado por Omar Marmoush. Henderson também foi protagonista em um lance polêmico, ao tocar a bola com a mão fora da área, mas o árbitro, após revisão do VAR, decidiu não expulsá-lo.</p>
 
-    <p>Com essa vitória, o Crystal Palace encerra um jejum de títulos e conquista a Copa da Inglaterra após ter perdido duas finais anteriores para o Manchester United, sendo a última em 2015/16. Do lado do Manchester City, a derrota marca a última chance de título para o meio-campista Kevin De Bruyne, que anunciou sua saída após dez temporadas no clube.</p>
-  </article>
-  <!-- leia tbm??? -->
+  <!-- CONTEÚDO PRINCIPAL: ASIDE + ARTIGO -->
+  <div class="conteudo-principal">
+    <!-- MAIS VISTAS -->
+    <aside class="outras-noticias">
+      <h2>Outras notícias</h2>
+
+     <div class="item-ranking">
+    <a href="../noticias/dona.html" class="noticia" data-tags="Cristiano Ronaldo">
+      <img src="../../imgs/noticias/donar.jpg" alt="Cristiano Ronaldo" />
+      <div class="texto-ranking">
+        <span class="categoria">DONNARUMMA SOBRE MBAPPE</span>
+        <p>Donnarumma fala sobre momento do PSG desde saída de Mbappé: 'Somos uma equipe melhor'</p>
+      </div>
+    </a>
+  </div>
+
+  <div class="item-ranking">
+    <a href="../noticias/raphinha.html" class="noticia" data-tags="Raphinha o melhor">
+      <img src="../../imgs/noticias/rapha.png" alt="Raphinha" />
+      <div class="texto-ranking">
+        <span class="categoria destaque">RAPHINHA O MELHOR</span>
+        <p>Raphinha é eleito o melhor jogador do Campeonato Espanhol 2024/25</p>
+      </div>
+    </a>
+  </div>
+
+  <div class="item-ranking">
+    <a href="../noticias/interXpsg.html" class="noticia" data-tags="CT palpite">
+      <img src="../../imgs/noticias/palpites.png" alt="Palpites PSG x Inter" />
+      <div class="texto-ranking">
+        <span class="categoria">PALPITES DO CT</span>
+        <p>PSG X Inter de Milão: quem leva a melhor? Veja os palpites do CT Insider</p>
+      </div>
+        </a>
+      </div>
+    </aside>
+
+    <!-- NOTÍCIA -->
+    <article>
+      <h1>Crystal Palace conquista primeiro grande título de sua história em cima do Manchester City</h1>
+      <p>
+        Eze marca o gol da vitória em Wembley; goleiro Henderson brilha com defesas decisivas, incluindo um pênalti
+      </p>
+      <figure>
+        <img src="../../imgs/noticias/crystal.jpg" alt="Crystal Palace campeão" />
+        <figcaption></figcaption>
+      </figure>
+
+      <p class="especificacao">Por Redação da CT Insider - 17 de Maio de 2025 · 15:15 hs</p>
+
+      <p>
+        O Crystal Palace fez história sábado (17/05) ao conquistar seu primeiro título de elite ao derrotar o Manchester City por 1 a 0 na final da Copa da Inglaterra, realizada no estádio de Wembley. O gol da vitória foi marcado por Eberechi Eze aos 16 minutos do primeiro tempo, após cruzamento de Daniel Muñoz.
+      </p>
+
+      <p>
+        O goleiro Dean Henderson foi o grande destaque da partida, realizando diversas defesas importantes, incluindo a defesa de um pênalti cobrado por Omar Marmoush. Henderson também foi protagonista em um lance polêmico, ao tocar a bola com a mão fora da área, mas o árbitro, após revisão do VAR, decidiu não expulsá-lo.
+      </p>
+
+      <p>
+        Com essa vitória, o Crystal Palace encerra um jejum de títulos e conquista a Copa da Inglaterra após ter perdido duas finais anteriores para o Manchester United, sendo a última em 2015/16. Do lado do Manchester City, a derrota marca a última chance de título para o meio-campista Kevin De Bruyne, que anunciou sua saída após dez temporadas no clube.
+      </p>
+    </article>
+  </div>
+
+  <!-- MODAL -->
+  <div id="modal-container"></div>
+
+  <!-- FOOTER -->
   <footer>
     <div class="redes-sociais">
       <nav>
         <ul>
-          <li>
-            <a href="https://instagram.com"><img src="../../imgs/icons/insta.png"></a>
-          </li>
-          <li>
-            <a href="https://youtube.com"><img src="../../imgs/icons/yt.png"></a>
-          </li>
-          <li>
-            <a href=" https://twitch.tv"><img src="../../imgs/icons/twitch.png"></a>
-          </li>
-          <li><a href="https://tiktok.com"><img src="../../imgs/icons/ttk.png"></a>
-          </li>
+          <li><a href="https://instagram.com"><img src="../../imgs/icons/insta.png" alt="Instagram" /></a></li>
+          <li><a href="https://youtube.com"><img src="../../imgs/icons/yt.png" alt="YouTube" /></a></li>
+          <li><a href="https://twitch.tv"><img src="../../imgs/icons/twitch.png" alt="Twitch" /></a></li>
+          <li><a href="https://tiktok.com"><img src="../../imgs/icons/ttk.png" alt="TikTok" /></a></li>
         </ul>
       </nav>
     </div>
