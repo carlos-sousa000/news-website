@@ -5,7 +5,7 @@ btnAbrir.addEventListener("click", async () => {
   // Só carrega se ainda não foi carregado
   if (!document.getElementById("modal-contato")) {
     try {
-      const response = await fetch("../pags/forms/contato.html");
+      const response = await fetch("./pags/forms/contato.html");
       const html = await response.text();
       modalContainer.innerHTML = html;
 
