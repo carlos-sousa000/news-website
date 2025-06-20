@@ -110,7 +110,24 @@
     <button id="abrir-contato" class="btn-contato">Contato</button>
 
     <!-- MODAL -->
-    <div id="modal-container"></div>
+    <div id="modal-contato" class="modal">
+      <div class="modal-conteudo">
+        <span class="fechar-modal" id="fechar-modal">&times;</span>
+        <h2>Fale Conosco</h2>
+        <form id="form-contato">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+          <button type="submit" class="btn-enviar">Enviar</button>
+        </form>
+      </div>
+    </div>
 
     <p>&copy; Copyright 2000-2025 CT Insider.</p>
   </footer>
@@ -118,7 +135,7 @@
   <!-- SCRIPTS -->
   <script src="./scripts/loginPrimitivo.js"></script>
   <script src="./scripts/filtro.js"></script>
-  <script src="./scripts/modalModerno.js"></script>
+  <script src="./scripts/modal.js"></script>
 </body>
 
 </html>

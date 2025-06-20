@@ -1,3 +1,5 @@
+// SÓ FUNCIONA USANDO LIVE SERVER, POR ISSO REPETIR O FORM TODAS AS VEZES, ach q o prof n vai usar o live server
+
 const btnAbrir = document.getElementById("abrir-contato");
 const modalContainer = document.getElementById("modal-container");
 
@@ -5,7 +7,7 @@ btnAbrir.addEventListener("click", async () => {
   // Só carrega se ainda não foi carregado
   if (!document.getElementById("modal-contato")) {
     try {
-      const response = await fetch("./pags/forms/contato.html");
+      const response = await fetch("./pags/contato.html");
       const html = await response.text();
       modalContainer.innerHTML = html;
 

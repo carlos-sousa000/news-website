@@ -30,7 +30,8 @@ MODAL + CONTATO
   background: rgba(0, 0, 0, 0.7);
   justify-content: center;
   align-items: center;
-  animation-fill-mode: forwards;
+  /* Duração para o JS esperar ao fechar */
+  transition: opacity 0.3s ease;
 }
 
 .modal-conteudo {
@@ -43,12 +44,14 @@ MODAL + CONTATO
   position: relative;
 
   /* 
-  Animação (tirar isso pra ver o antigo) 
+  Animação (tirar isso pra ver o velho)
   */
   transform: scale(0.9);
   opacity: 0;
-  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
+/* Quando o modal estiver visível */
 
 .modal.mostrar .modal-conteudo {
   transform: scale(1);
@@ -67,6 +70,7 @@ MODAL + CONTATO
   font-size: 2rem;
   font-weight: bold;
   cursor: pointer;
+  z-index: 10;
 }
 
 /* CONTATO */
