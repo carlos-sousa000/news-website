@@ -1,8 +1,6 @@
-/* 
-MODAL + CONTATO
-*/
-
-/* VELHO:::: */
+/*
+ VELHO:
+ */
 /* .modal {
   display: none;
   position: fixed;
@@ -16,6 +14,10 @@ MODAL + CONTATO
   justify-content: center;
   align-items: center;
 } */
+
+/* 
+MODAL + CONTATO
+*/
 
 .modal {
   display: none;
@@ -40,7 +42,9 @@ MODAL + CONTATO
   color: black;
   position: relative;
 
-  /* Animação  (tirar isso pra ver o antigo) */
+  /* 
+  Animação (tirar isso pra ver o antigo) 
+  */
   transform: scale(0.9);
   opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
