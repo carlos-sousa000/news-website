@@ -1,4 +1,5 @@
 @import url("./style.css");
+
 /* HEADER */
 header {
   margin-bottom: 1rem;
@@ -59,7 +60,8 @@ blockquote {
 }
 p,
 h1,
-blockquote {
+blockquote,
+video {
   margin-bottom: 2rem;
 }
 
@@ -82,4 +84,13 @@ blockquote::after {
 
 section h2 {
   margin-bottom: 1rem;
+}
+
+video {
+  border-radius: 4px;
+}
+
+.alinhar {
+  display: flex;
+  justify-content: center;
 }

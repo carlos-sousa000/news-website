@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="./styles/style.css">
   <title>CT Insider</title>
 </head>
 
@@ -30,12 +30,10 @@
       </ul>
     </nav>
   </header>
+
+  <!-- PRINCIPAL-->
   <main>
-    <!-- Conteúdo principal -->
-    <!-- <div class="img-principal-noticia">
-    <h1 class="titulo-noticia">[NOTICIA]</h1>
-  </div> 
-  isso é pra colocar dps caso a gente queira colocar um noticia grande em cima na pag-->
+
     <div class="container-noticias">
       <a href="pags/noticias/template.html" class="noticia" data-tags="Donnarumma PSG">
         <img src="imgs/noticias/donar.jpg">
@@ -89,7 +87,7 @@
     </div>
   </main>
 
-  <!-- Rodapé (mudar depois, COLOCAR IMG DE IA NOS ICONS) -->
+  <!-- FOOTER -->
   <footer style="margin-top: 1rem;">
     <div class="redes-sociais">
       <nav>
@@ -108,75 +106,36 @@
         </ul>
       </nav>
     </div>
+
+    <button id="abrir-contato" class="btn-contato">Contato</button>
+
+    <!-- MODAL -->
+    <div id="modal-contato" class="modal">
+      <div class="modal-conteudo">
+        <span class="fechar-modal" id="fechar-modal">&times;</span>
+        <h2>Fale Conosco</h2>
+        <form id="form-contato">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+          <button type="submit" class="btn-enviar">Enviar</button>
+        </form>
+      </div>
+    </div>
+
     <p>&copy; Copyright 2000-2025 CT Insider.</p>
   </footer>
-  <!-- Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const filtro = document.getElementById('filtro');
-      const noticias = document.querySelectorAll('.noticia');
 
-      function normalizarTexto(texto) {
-        return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-      }
-
-      filtro.addEventListener('input', function () {
-        const termo = normalizarTexto(this.value);
-        let visibleCount = 0;
-
-        noticias.forEach((noticia, index) => {
-          const texto = normalizarTexto(noticia.textContent);
-          const tags = normalizarTexto(noticia.getAttribute('data-tags'));
-
-          if (texto.includes(termo) || tags.includes(termo)) {
-            noticia.classList.remove('hidden');
-            noticia.style.order = visibleCount < 2 ? 1 : 2;
-            visibleCount++;
-          } else {
-            noticia.classList.add('hidden');
-            noticia.style.order = 2;
-          }
-        });
-
-        document.querySelectorAll('.noticia:not(.hidden)').forEach((noticia, index) => {
-          noticia.style.order = index < 2 ? 1 : 2;
-        });
-      });
-    });
-
-    document.addEventListener('DOMContentLoaded', function () {
-      const nomeUsuarioLink = document.getElementById('nome-usuario');
-      const iconeUsuario = document.getElementById('icone-usuario');
-      const nomeTexto = document.getElementById('nome-texto');
-
-      function atualizarMenu() {
-        const nomeSalvo = localStorage.getItem('nome');
-
-        if (nomeSalvo) {
-          nomeTexto.textContent = nomeSalvo;
-          iconeUsuario.style.display = 'inline-block';
-        } else {
-          nomeTexto.textContent = 'Login';
-          iconeUsuario.style.display = 'none';
-        }
-      }
-
-      atualizarMenu(); // Atualiza ao carregar a página
-
-      nomeUsuarioLink.addEventListener('click', function (event) {
-        event.preventDefault();
-
-        const nomeSalvo = localStorage.getItem('nome');
-
-        if (nomeSalvo) {
-          window.location.href = 'pags/conta.html';
-        } else {
-          window.location.href = 'pags/forms/login.html';
-        }
-      });
-    });
-
-  </script>
+  <!-- SCRIPTS -->
+  <script src="./scripts/loginprimitivo.js"></script>
+  <script src="./scripts/filtro.js"></script>
+  <script src="./scripts/modal.js"></script>
 </body>
 
 </html>
