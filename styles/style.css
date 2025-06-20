@@ -68,7 +68,8 @@ nav a {
   border-radius: 4px;
 }
 
-.logo {
+.logo,
+.home-link {
   /* max-height: 30%;
   max-width: 30%; */
   height: 160px;

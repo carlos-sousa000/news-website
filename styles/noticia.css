@@ -32,7 +32,9 @@ header .logo {
 }
 
 article {
-  margin: 0 2rem 0 2rem;
+  /* margin: 0 2rem 0 2rem; */
+  margin: 0 0 0 2rem; /* margem só à esquerda */
+  flex: 1;
 }
 
 h1 {
@@ -61,9 +63,6 @@ p {
   font-size: 1.2rem;
 }
 
-blockquote {
-  font-size: 1.4rem;
-}
 p,
 h1,
 blockquote,
@@ -106,9 +105,9 @@ video {
 .outras-noticias {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  margin-right: 3rem;
+  gap: 1rem;
   flex: 0 0 320px;
+  margin-right: 2rem;
 }
 
 .outras-noticias h2 {
@@ -120,32 +119,6 @@ video {
   text-transform: uppercase;
 }
 
-/* ITENS */
-.item-ranking {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  gap: 1rem;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 1rem;
-  position: relative;
-}
-.item-ranking img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 6px;
-  flex-shrink: 0;
-}
-
-.item-ranking a.noticia {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  text-decoration: none;
-  color: inherit;
-}
-
 /* Texto da notícia */
 .texto-ranking {
   flex: 1;
@@ -155,7 +128,7 @@ video {
   font-size: 0.75rem;
   font-weight: bold;
   text-transform: uppercase;
-  color: var(--azul-principal); /* roxo/rosa forte */
+  color: var(--azul-principal);
   margin-bottom: 0.25rem;
   display: inline-block;
 }
@@ -163,6 +136,59 @@ video {
 .texto-ranking p {
   font-size: 0.9rem;
   color: #111;
+  line-height: 1.5;
+}
+
+.item-ranking {
+  position: relative;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.item-ranking::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  width: 90%;
+  height: 2px;
+  background-color: #ccc;
+  border-radius: 6px;
+}
+.item-ranking a.noticia {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0.75rem; /* espaçamento interno da borda */
+  gap: 1rem; /* funciona agora, pois img e texto estão aqui */
+  text-decoration: none;
+  color: inherit;
+}
+
+.item-ranking img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.texto-ranking {
+  flex: 1;
+}
+
+.texto-ranking .categoria {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #003399;
+  margin-bottom: 0.25rem;
+  display: inline-block;
+}
+
+.texto-ranking p {
   margin: 0;
-  line-height: 1.4;
+  font-size: 0.88rem;
+  line-height: 1.3;
 }
