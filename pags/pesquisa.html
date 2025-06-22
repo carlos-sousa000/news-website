@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href=".././styles/style.css">
+  <title>Pesquisa - CT Insider</title>
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <a href="../index.html" class="home-link">
+      <img src=".././imgs/ct-insider-logo-removed.png" class="logo">
+    </a>
+    <nav>
+      <ul>
+        <li>
+          <div class="search-wrapper">
+            <input type="text" id="filtro" placeholder="Pesquisar...">
+          </div>
+        </li>
+        <li>
+          <a id="nome-usuario" style="display: flex; align-items: center; gap: 10px;">
+            <span id="nome-texto">Login</span>
+            <img id="icone-usuario" src=".././imgs/user-icon-template.jpg" alt="Usuário" style="width:60px; height: 60px; border-radius: 50%; display: none;">
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- PRINCIPAL-->
+  <main>
+    <div class="container-noticias">
+      <a href=".././pags/noticias/dona.html" class="noticia" data-tags="Donnarumma PSG">
+        <img src=".././imgs/noticias/donar.jpg">
+        Donnarumma fala sobre momento do PSG desde saída de Mbappé: 'Somos uma equipe melhor'
+      </a>
+
+      <a href=".././pags/noticias/tabela.html" class="noticia" data-tags="Premier League Tabelas">
+        <img src=".././imgs/noticias/premiernoticia.png">
+        Tabela Premier League 24/25 - Classificação
+      </a>
+
+      <a href=".././pags/noticias/finalchamp.html" class="noticia" data-tags="Final Champions">
+        <img src=".././imgs/noticias/finalchamp.png">
+        PSG massacra Inter de Milão com show de herói improvável e é campeão da Champions League pela 1ª vez na história
+      </a>
+
+      <a href=".././pags/noticias/sommer.html" class="noticia" data-tags="Sommer Inter">
+        <img src=".././imgs/noticias/sommermelhor.png">
+        Paredão histórico: Sommer, da Inter de Milão, brilhou contra o Barcelona na Champions
+      </a>
+
+      <a href=".././pags/noticias/cristiano.html" class="noticia" data-tags="Cristiano Ronaldo">
+        <img src=".././imgs/noticias/robozao.png">
+        Cristiano Ronaldo fala sobre futuro em meio à especulação no futebol brasileiro
+      </a>
+
+      <a href=".././pags/noticias/interXpsg.html" class="noticia" data-tags="CT Palpite">
+        <img src=".././imgs/noticias/palpites.png">
+        Palpites do CT | PSG X Inter de Milão: quem leva a melhor?
+      </a>
+
+      <a href=".././pags/noticias/raphinha.html" class="noticia" data-tags="Raphinha Melhor">
+        <img src=".././imgs/noticias/rapha.png">
+        Raphinha é eleito o melhor jogador do Campeonato Espanhol 2024/25
+      </a>
+
+      <a href=".././pags/noticias/crystal.html" class="noticia" data-tags="Crystal Palace">
+        <img src=".././imgs/noticias/palacecry.PNG">
+        Crystal Palace conquista primeiro grande título de sua história em cima do Manchester City
+      </a>
+
+      <a href=".././pags/noticias/arnold.html" class="noticia" data-tags="Trent Liverpool">
+        <img src=".././imgs/noticias/arnold.png">
+        Real Madrid anuncia Alexander-Arnold, ex-Liverpool, para o Mundial de Clubes
+      </a>
+
+      <a href=".././pags/noticias/foradosgramados.html" class="noticia" data-tags="Chelsea Gramado">
+        <img src=".././imgs/noticias/mudryyk.png">
+        Atacante do Chelsea é acusado de doping e pode ficar quatro anos afastado dos gramados
+      </a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer style="margin-top: 1rem;">
+    <div class="redes-sociais">
+      <nav>
+        <ul>
+          <li>
+            <a href="https://instagram.com"><img src=".././imgs/icons/insta.png"></a>
+          </li>
+          <li>
+            <a href="https://youtube.com"><img src=".././imgs/icons/yt.png"></a>
+          </li>
+          <li>
+            <a href=" https://twitch.tv"><img src=".././imgs/icons/twitch.png"></a>
+          </li>
+          <li><a href="https://tiktok.com"><img src=".././imgs/icons/ttk.png"></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <button id="abrir-contato" class="btn-contato">Contato</button>
+
+    <!-- MODAL -->
+    <div id="modal-contato" class="modal">
+      <div class="modal-conteudo">
+        <span class="fechar-modal" id="fechar-modal">&times;</span>
+        <h2>Fale Conosco</h2>
+        <form id="form-contato">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+          <button type="submit" class="btn-enviar">Enviar</button>
+        </form>
+      </div>
+    </div>
+    <p>&copy; Copyright 2000-2025 CT Insider.</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src=".././scripts/loginPrimitivo.js"></script>
+  <script src=".././scripts/filtro.js"></script>
+  <script src=".././scripts/modal.js"></script>
+</body>
+
+</html>

@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/indexStyle.css">
   <title>CT Insider</title>
 </head>
 
@@ -17,9 +18,9 @@
     <nav>
       <ul>
         <li>
-          <div class="search-wrapper">
-            <input type="text" id="filtro" placeholder="Pesquisar...">
-          </div>
+          <a href="./pags/pesquisa.html" class="botao-pesquisa">
+            <img src="./imgs/icons/pesquisa.png" class="pesquisa-icon">
+          </a>
         </li>
         <li>
           <a id="nome-usuario" style="display: flex; align-items: center; gap: 10px;">
@@ -31,59 +32,49 @@
     </nav>
   </header>
 
-  <!-- PRINCIPAL-->
+  <!-- PRINCIPAL -->
   <main>
-    <div class="container-noticias">
-      <a href="pags/noticias/dona.html" class="noticia" data-tags="Donnarumma PSG">
-        <img src="imgs/noticias/donar.jpg">
-        Donnarumma fala sobre momento do PSG desde saída de Mbappé: 'Somos uma equipe melhor'
+    <section class="noticias-1">
+      <a href="./pags/noticias/finalchamp.html">
+        <div class="noticia-principal" style="background-image: url('./imgs/noticias/finalchamp.png');">
+          <h2>PSG massacra Inter de Milão com show de herói improvável e é campeão da Champions League pela 1ª vez na história</h2>
+        </div>
       </a>
+      <div class="noticias-laterais">
+        <a href="./pags/noticias/cristiano.html">
+          <div class=" noticia-lateral" style="background-image: url('./imgs/noticias/cr7.png'); margin-bottom: 10px;">
+            <h3>Cristiano Ronaldo fala sobre futuro em meio à especulação no futebol brasileiro</h3>
+          </div>
+        </a>
 
-      <a href="./pags/noticias/tabela.html" class="noticia" data-tags="Premier League Tabelas">
-        <img src="imgs/noticias/premiernoticia.png">
-        Tabela Premier League 24/25 - Classificação
-      </a>
+        <a href="./pags/noticias/foradosgramados.html">
+          <div class="noticia-lateral" style="background-image: url('./imgs/noticias/dopado.png');">
+            <h3>Atacante do Chelsea é acusado de doping e pode ficar quatro anos afastado dos gramados</h3>
+          </div>
+        </a>
+      </div>
+    </section>
 
-      <a href="./pags/noticias/finalchamp.html" class="noticia" data-tags="Final Champions">
-        <img src="imgs/noticias/finalchamp.png">
-        PSG massacra Inter de Milão com show de herói improvável e é campeão da Champions League pela 1ª vez na história
-      </a>
-
-      <a href="./pags/noticias/sommer.html" class="noticia" data-tags="Sommer Inter">
-        <img src="imgs/noticias/sommermelhor.png">
-        Paredão histórico: Sommer, da Inter de Milão, brilhou contra o Barcelona na Champions
-      </a>
-
-      <a href="./pags/noticias/cristiano.html" class="noticia" data-tags="Cristiano Ronaldo">
-        <img src="imgs/noticias/robozao.png">
-        Cristiano Ronaldo fala sobre futuro em meio à especulação no futebol brasileiro
-      </a>
-
-      <a href="./pags/noticias/interXpsg.html" class="noticia" data-tags="CT Palpite">
-        <img src="imgs/noticias/palpites.png">
-        Palpites do CT | PSG X Inter de Milão: quem leva a melhor?
-      </a>
-
-      <a href="./pags/noticias/raphinha.html" class="noticia" data-tags="Raphinha Melhor">
-        <img src="imgs/noticias/rapha.png">
-        Raphinha é eleito o melhor jogador do Campeonato Espanhol 2024/25
-      </a>
-
-      <a href="./pags/noticias/crystal.html" class="noticia" data-tags="Crystal Palace">
-        <img src="imgs/noticias/palacecry.PNG">
-        Crystal Palace conquista primeiro grande título de sua história em cima do Manchester City
-      </a>
-
-      <a href="./pags/noticias/arnold.html" class="noticia" data-tags="Trent Liverpool">
-        <img src="./imgs/noticias/arnold.png">
-        Real Madrid anuncia Alexander-Arnold, ex-Liverpool, para o Mundial de Clubes
-      </a>
-
-      <a href="./pags/noticias/foradosgramados.html" class="noticia" data-tags="Chelsea Gramado">
-        <img src="./imgs/noticias/mudryyk.png">
-        Atacante do Chelsea é acusado de doping e pode ficar quatro anos afastado dos gramados
-      </a>
-    </div>
+    <section>
+      <div class="noticias-2">
+        <a href=".././pags/noticias/sommer.html" class="noticia-horizontal">
+          <img src=".././imgs/noticias/sommermelhor.png">
+          <p>Paredão histórico: Sommer, da Inter de Milão, brilhou contra o Barcelona na Champions</p>
+        </a>
+        <a href=".././pags/noticias/raphinha.html" class="noticia-horizontal">
+          <img src=".././imgs/noticias/rapha.png">
+          <p>Raphinha é eleito o melhor jogador do Campeonato Espanhol 2024/25</p>
+        </a>
+        <a href=".././pags/noticias/crystal.html" class="noticia-horizontal">
+          <img src=".././imgs/noticias/palacecry.PNG">
+          <p>Crystal Palace conquista primeiro grande título de sua história em cima do Manchester City</p>
+        </a>
+        <a href=".././pags/noticias/dona.html" class="noticia-horizontal">
+          <img src=".././imgs/noticias/mbappedonna.jpg">
+          <p>Donnarumma fala sobre momento do PSG desde saída de Mbappé: 'Somos uma equipe melhor'</p>
+        </a>
+      </div>
+    </section>
   </main>
 
   <!-- FOOTER -->
@@ -107,7 +98,6 @@
     </div>
     <button id="abrir-contato" class="btn-contato">Contato</button>
 
-    <!-- MODAL -->
     <div id="modal-contato" class="modal">
       <div class="modal-conteudo">
         <span class="fechar-modal" id="fechar-modal">&times;</span>
@@ -129,7 +119,6 @@
     <p>&copy; Copyright 2000-2025 CT Insider.</p>
   </footer>
 
-  <!-- SCRIPTS -->
   <script src="./scripts/loginPrimitivo.js"></script>
   <script src="./scripts/filtro.js"></script>
   <script src="./scripts/modal.js"></script>
