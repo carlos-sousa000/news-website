@@ -1,4 +1,4 @@
-// SÓ FUNCIONA USANDO LIVE SERVER, POR ISSO REPETIR O FORM TODAS AS VEZES, ach q o prof n vai usar o live server
+// SÓ FUNCIONA USANDO LIVE SERVER, POR ISSO REPETIR O FORM TODAS AS VEZES, ach q o prof n vai usar o live server, por isso colocar tds os forms
 
 const btnAbrir = document.getElementById("abrir-contato");
 const modalContainer = document.getElementById("modal-container");

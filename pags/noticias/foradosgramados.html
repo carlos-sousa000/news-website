@@ -17,7 +17,35 @@
 
   <!-- CONTEÚDO PRINCIPAL: ASIDE + ARTIGO -->
   <div class="conteudo-principal">
-    <!-- MAIS VISTAS -->
+    <!-- ARTIGO PRINCIPAL -->
+    <article>
+      <h1>Atacante do Chelsea é acusado de doping e pode ficar quatro anos afastado dos gramados</h1>
+      <p>
+        Mykhailo Mudryk teria usado Meldonium, substância utilizada para tratar doenças do coração
+      </p>
+      <figure>
+        <img src="../../imgs/noticias/dopado.png" alt="Mudryk" />
+        <figcaption></figcaption>
+      </figure>
+      <p class="especificacao">Por Redação da CT Insider - 18 de Junho de 2025 · 13:12 hs</p>
+      <p>
+        O atacante do Chelsea Mykhailo Mudryk pode ficar até quatro anos afastado do futebol. O jogador ucraniano é acusado pela Federação Inglesa de Futebol (FA) de doping por ter usado uma substância proibida. A informação foi divulgada pelo jornal 'Telegraph', da Inglaterra.
+      </p>
+
+      <p>
+        De acordo com a FA, foram encontrados indícios de Meldonium, substância utilizada para tratar doenças do coração, na urina de Mudryk. Ele foi notificado em 2024 e agora pode pegar uma suspensão de quatro anos.
+      </p>
+
+      <blockquote>
+        "Podemos confirmar que Mykhailo Mudryk foi acusado de Violações das Regras Antidoping, alegando a presença e/ou uso de uma substância proibida, nos termos dos Regulamentos 3 e 4 do Regulamento Antidoping da FA. Como este é um caso em curso, não estamos em condições de fazer mais comentários neste momento", disse um porta-voz da Federação ao 'Telegraph'.
+      </blockquote>
+
+      <p>
+        Mudryk foi suspenso preventivamente em dezembro de 2024 quando caiu no exame antidoping. O atacante chegou ao Chelsea em 2023, contratado por 100 milhões de euros (R$ 550 milhões na cotação da época). O jogador nunca conseguiu se firmar nos Blues.
+      </p>
+    </article>
+
+    <!-- ASIDE -->
     <aside class="outras-noticias">
       <h2>Outras notícias</h2>
 
@@ -51,39 +79,9 @@
         </a>
       </div>
     </aside>
-
-    <!-- ARTIGO PRINCIPAL -->
-    <article>
-      <h1>Atacante do Chelsea é acusado de doping e pode ficar quatro anos afastado dos gramados</h1>
-      <p>
-        Mykhailo Mudryk teria usado Meldonium, substância utilizada para tratar doenças do coração
-      </p>
-      <figure>
-        <img src="../../imgs/noticias/dopado.png" alt="Mudryk" />
-        <figcaption></figcaption>
-      </figure>
-      <p class="especificacao">Por Redação da CT Insider - 17 de Maio de 2025 · 15:15 hs</p>
-      <p>
-        O atacante do Chelsea Mykhailo Mudryk pode ficar até quatro anos afastado do futebol. O jogador ucraniano é acusado pela Federação Inglesa de Futebol (FA) de doping por ter usado uma substância proibida. A informação foi divulgada pelo jornal 'Telegraph', da Inglaterra.
-      </p>
-
-      <p>
-        De acordo com a FA, foram encontrados indícios de Meldonium, substância utilizada para tratar doenças do coração, na urina de Mudryk. Ele foi notificado em 2024 e agora pode pegar uma suspensão de quatro anos.
-      </p>
-
-      <blockquote>
-        "Podemos confirmar que Mykhailo Mudryk foi acusado de Violações das Regras Antidoping, alegando a presença e/ou uso de uma substância proibida, nos termos dos Regulamentos 3 e 4 do Regulamento Antidoping da FA. Como este é um caso em curso, não estamos em condições de fazer mais comentários neste momento", disse um porta-voz da Federação ao 'Telegraph'.
-      </blockquote>
-
-      <p>
-        Mudryk foi suspenso preventivamente em dezembro de 2024 quando caiu no exame antidoping. O atacante chegou ao Chelsea em 2023, contratado por 100 milhões de euros (R$ 550 milhões na cotação da época). O jogador nunca conseguiu se firmar nos Blues.
-      </p>
-    </article>
   </div>
 
-  <!-- MODAL -->
-  <div id="modal-container"></div>
-
+  <!-- FOOTER -->
   <footer>
     <div class="redes-sociais">
       <nav>
@@ -95,8 +93,34 @@
         </ul>
       </nav>
     </div>
+
+    <button id="abrir-contato" class="btn-contato">Contato</button>
+
+    <!-- MODAL -->
+    <div id="modal-contato" class="modal">
+      <div class="modal-conteudo">
+        <span class="fechar-modal" id="fechar-modal">&times;</span>
+        <h2>Fale Conosco</h2>
+        <form id="form-contato">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+          <button type="submit" class="btn-enviar">Enviar</button>
+        </form>
+      </div>
+    </div>
+
     <p>&copy; Copyright 2000-2025 CT Insider.</p>
   </footer>
+
+  <!-- SCRIPT -->
+  <script src="../../scripts/modal.js"></script>
 </body>
 
 </html>

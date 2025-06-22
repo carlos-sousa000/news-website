@@ -17,42 +17,6 @@
 
   <!-- CONTEÚDO PRINCIPAL: ASIDE + ARTIGO -->
   <div class="conteudo-principal">
-    
-    <!-- ASIDE COM OUTRAS NOTÍCIAS -->
-   <aside class="outras-noticias">
-  <h2>Outras notícias</h2>
-
-  <div class="item-ranking">
-    <a href="../noticias/sommer.html" class="noticia" data-tags="Sommer Inter">
-      <img src="../../imgs/noticias/sommermelhor.png" alt="Sommer Inter" />
-      <div class="texto-ranking">
-        <span class="categoria">PAREDÃO HISTÓRICO</span>
-        <p>Sommer, da Inter de Milão, brilhou contra o Barcelona na Champions League</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="item-ranking">
-    <a href="../noticias/cristiano.html" class="noticia" data-tags="Cristiano Ronaldo Al-Nassr Brasil">
-      <img src="../../imgs/noticias/robozao.png" alt="Cristiano Ronaldo" />
-      <div class="texto-ranking">
-        <span class="categoria">FUTURO EM ABERTO</span>
-        <p>Cristiano Ronaldo fala sobre futuro após título da Nations: "Praticamente não vai mudar nada"</p>
-      </div>
-    </a>
-  </div>
-
-  <div class="item-ranking">
-    <a href="../noticias/tabela.html" class="noticia" data-tags="Premier League Tabela">
-      <img src="../../imgs/escudos/premier.png" alt="Premier League" />
-      <div class="texto-ranking">
-        <span class="categoria destaque">PREMIER LEAGUE</span>
-        <p>Tabela Premier League 24/25 - Veja a classificação atualizada</p>
-      </div>
-    </a>
-  </div>
-</aside>
-
 
     <!-- ARTIGO PRINCIPAL -->
     <article>
@@ -72,10 +36,42 @@
 
       <p>Agora, a equipe comandada por Luis Enrique chega ainda mais forte para a disputa do Mundial de Clubes, onde está, inclusive, no grupo do Botafogo. O PSG estreia na competição diante do Atlético de Madrid no dia 15 de junho.</p>
     </article>
-  </div>
 
-  <!-- MODAL -->
-  <div id="modal-container"></div>
+    <!-- ASIDE COM OUTRAS NOTÍCIAS -->
+    <aside class="outras-noticias">
+      <h2>Outras notícias</h2>
+
+      <div class="item-ranking">
+        <a href="../noticias/sommer.html" class="noticia" data-tags="Sommer Inter">
+          <img src="../../imgs/noticias/sommermelhor.png" alt="Sommer Inter" />
+          <div class="texto-ranking">
+            <span class="categoria">PAREDÃO HISTÓRICO</span>
+            <p>Sommer, da Inter de Milão, brilhou contra o Barcelona na Champions League</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="item-ranking">
+        <a href="../noticias/cristiano.html" class="noticia" data-tags="Cristiano Ronaldo Al-Nassr Brasil">
+          <img src="../../imgs/noticias/robozao.png" alt="Cristiano Ronaldo" />
+          <div class="texto-ranking">
+            <span class="categoria">FUTURO EM ABERTO</span>
+            <p>Cristiano Ronaldo fala sobre futuro após título da Nations: "Praticamente não vai mudar nada"</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="item-ranking">
+        <a href="../noticias/tabela.html" class="noticia" data-tags="Premier League Tabela">
+          <img src="../../imgs/escudos/premier.png" alt="Premier League" />
+          <div class="texto-ranking">
+            <span class="categoria destaque">PREMIER LEAGUE</span>
+            <p>Tabela Premier League 24/25 - Veja a classificação atualizada</p>
+          </div>
+        </a>
+      </div>
+    </aside>
+  </div>
 
   <!-- FOOTER -->
   <footer>
@@ -89,8 +85,34 @@
         </ul>
       </nav>
     </div>
+
+    <button id="abrir-contato" class="btn-contato">Contato</button>
+
+    <!-- MODAL -->
+    <div id="modal-contato" class="modal">
+      <div class="modal-conteudo">
+        <span class="fechar-modal" id="fechar-modal">&times;</span>
+        <h2>Fale Conosco</h2>
+        <form id="form-contato">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+          <button type="submit" class="btn-enviar">Enviar</button>
+        </form>
+      </div>
+    </div>
+
     <p>&copy; Copyright 2000-2025 CT Insider.</p>
   </footer>
+
+  <!-- SCRIPT -->
+  <script src="../../scripts/modal.js"></script>
 </body>
 
 </html>

@@ -17,9 +17,40 @@
 
   <!-- CONTEÚDO PRINCIPAL: ASIDE + ARTIGO -->
   <div class="conteudo-principal">
-    <!-- MAIS VISTAS -->
+    <!-- NOTÍCIA -->
+    <article>
+      <h1>Real Madrid anuncia Alexander-Arnold, ex-Liverpool, para o Mundial de Clubes</h1>
+      <p>
+        Lateral-direito de 26 anos é o principal reforço da equipe de Xabi Alonso na janela
+      </p>
+      <figure>
+        <img src="../../imgs/noticias/trent.png" alt="Trent" />
+        <figcaption></figcaption>
+      </figure>
+
+      <p class="especificacao">Por Redação da CT Insider - 17 de Maio de 2025 · 15:15 hs</p>
+
+      <p>
+        O Real Madrid anunciou, nesta sexta-feira (30), a contratação de Trent Alexander-Arnold. Por meio das redes sociais, o clube espanhol confirmou o acordo com o jogador de 26 anos, que passa a integrar a equipe de Xabi Alonso para a disputa do Mundial de Clubes, até junho de 2031.
+      </p>
+
+      <p>
+        Alexander-Arnold é o principal reforço do Real Madrid para a competição, que se inicia em 14 de junho. Os espanhóis estão no Grupo H, no qual enfrentam Al-Hilal (Árabia Saudita), Pachuca (México) e Salzburg (Áustria).
+      </p>
+
+      <p>
+        De acordo com a imprensa europeia, o Real Madrid teria pago uma compensação de 10 milhões de euros (R$ 64 milhões) pela liberação de Alexander-Arnold para o Mundial. Isso porque o contrato do jogador com os Reds era válido até 30 de junho.
+      </p>
+
+      <p>
+        Antes ídolo do Liverpool, Alexander-Arnold buscou novos desafios e acertou a saída dos Reds ainda durante a temporada. Apesar da conquista da Premier League, deixou o clube criticado pelos torcedores, que não aprovaram a postura do lateral e o desejo de um ciclo diferente. Arnold jogou em Anfield por 20 anos, desde o início das categorias de base.
+      </p>
+    </article>
+
+    <!-- OUTRAS NOTÍCIAS -->
     <aside class="outras-noticias">
       <h2>Outras Notícias</h2>
+
       <div class="item-ranking">
         <a href="../noticias/dona.html" class="noticia">
           <img src="../../imgs/noticias/donar.jpg" alt="DONNARUMMA" />
@@ -50,55 +81,48 @@
         </a>
       </div>
     </aside>
-
-    <!-- NOTÍCIA -->
-    <article>
-      <h1>Real Madrid anuncia Alexander-Arnold, ex-Liverpool, para o Mundial de Clubes</h1>
-      <p>
-        Lateral-direito de 26 anos é o principal reforço da equipe de Xabi Alonso na janela
-      </p>
-      <figure>
-        <img src="../../imgs/noticias/arnold.png" alt="Trent" />
-        <figcaption></figcaption>
-      </figure>
-
-      <p class="especificacao">Por Redação da CT Insider - 17 de Maio de 2025 · 15:15 hs</p>
-
-      <p>
-        O Real Madrid anunciou, nesta sexta-feira (30), a contratação de Trent Alexander-Arnold. Por meio das redes sociais, o clube espanhol confirmou o acordo com o jogador de 26 anos, que passa a integrar a equipe de Xabi Alonso para a disputa do Mundial de Clubes, até junho de 2031.
-      </p>
-
-      <p>
-        Alexander-Arnold é o principal reforço do Real Madrid para a competição, que se inicia em 14 de junho. Os espanhóis estão no Grupo H, no qual enfrentam Al-Hilal (Árabia Saudita), Pachuca (México) e Salzburg (Áustria).
-      </p>
-
-      <p>
-        De acordo com a imprensa europeia, o Real Madrid teria pago uma compensação de 10 milhões de euros (R$ 64 milhões) pela liberação de Alexander-Arnold para o Mundial. Isso porque o contrato do jogador com os Reds era válido até 30 de junho.
-      </p>
-
-      <p>
-        Antes ídolo do Liverpool, Alexander-Arnold buscou novos desafios e acertou a saída dos Reds ainda durante a temporada. Apesar da conquista da Premier League, deixou o clube criticado pelos torcedores, que não aprovaram a postura do lateral e o desejo de um ciclo diferente. Arnold jogou em Anfield por 20 anos, desde o início das categorias de base.
-      </p>
-    </article>
   </div>
-
-  <!-- MODAL -->
-  <div id="modal-container"></div>
 
   <!-- FOOTER -->
   <footer>
     <div class="redes-sociais">
       <nav>
         <ul>
-          <li><a href="https://instagram.com"><img src="../../imgs/icons/insta.png" alt="Instagram" /></a></li>
-          <li><a href="https://youtube.com"><img src="../../imgs/icons/yt.png" alt="YouTube" /></a></li>
-          <li><a href="https://twitch.tv"><img src="../../imgs/icons/twitch.png" alt="Twitch" /></a></li>
-          <li><a href="https://tiktok.com"><img src="../../imgs/icons/ttk.png" alt="TikTok" /></a></li>
+          <li><a href="https://instagram.com"><img src="../../imgs/icons/insta.png" /></a></li>
+          <li><a href="https://youtube.com"><img src="../../imgs/icons/yt.png" /></a></li>
+          <li><a href="https://twitch.tv"><img src="../../imgs/icons/twitch.png" /></a></li>
+          <li><a href="https://tiktok.com"><img src="../../imgs/icons/ttk.png" /></a></li>
         </ul>
       </nav>
     </div>
+
+    <button id="abrir-contato" class="btn-contato">Contato</button>
+
+    <!-- MODAL -->
+    <div id="modal-contato" class="modal">
+      <div class="modal-conteudo">
+        <span class="fechar-modal" id="fechar-modal">&times;</span>
+        <h2>Fale Conosco</h2>
+        <form id="form-contato">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+          <button type="submit" class="btn-enviar">Enviar</button>
+        </form>
+      </div>
+    </div>
+
     <p>&copy; Copyright 2000-2025 CT Insider.</p>
   </footer>
+
+  <!-- SCRIPT -->
+  <script src="../../scripts/modal.js"></script>
 </body>
 
 </html>

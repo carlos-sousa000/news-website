@@ -16,41 +16,6 @@
   </header>
 
   <div class="conteudo-principal">
-    <!-- MAIS VISTAS -->
-    <aside class="outras-noticias">
-      <h2>Outras notícias</h2>
-
-      <div class="item-ranking">
-        <a href="../noticias/dona.html" class="noticia" data-tags="Donnarumma PSG">
-          <img src="../../imgs/noticias/donar.jpg" alt="Donnarumma" />
-          <div class="texto-ranking">
-            <span class="categoria">DONNARUMMA SOBRE MBAPPÉ</span>
-            <p>Donnarumma fala sobre momento do PSG desde saída de Mbappé: 'Somos uma equipe melhor'</p>
-          </div>
-        </a>
-      </div>
-
-      <div class="item-ranking">
-        <a href="../noticias/raphinha.html" class="noticia" data-tags="Raphinha o melhor">
-          <img src="../../imgs/noticias/rapha.png" alt="Raphinha" />
-          <div class="texto-ranking">
-            <span class="categoria destaque">RAPHINHA O MELHOR</span>
-            <p>Raphinha é eleito o melhor jogador do Campeonato Espanhol 2024/25</p>
-          </div>
-        </a>
-      </div>
-
-      <div class="item-ranking">
-        <a href="../noticias/foradosgramados.html" class="noticia" data-tags="Mudryk doping">
-          <img src="../../imgs/noticias/mudryyk.png" alt="Mudryk doping" />
-          <div class="texto-ranking">
-            <span class="categoria">MUDRYK FORA?</span>
-            <p>Atacante do Chelsea é acusado de doping e pode ficar quatro anos afastado dos gramados</p>
-          </div>
-        </a>
-      </div>
-    </aside>
-
     <!-- ARTIGO PRINCIPAL -->
     <article>
       <h1>Palpites do CT | PSG X Inter de Milão: quem leva a melhor?</h1>
@@ -96,11 +61,44 @@
         A expectativa está alta para este reencontro entre os finalistas da Champions League. A cobertura completa, com análises detalhadas e os principais destaques do jogo, estará disponível aqui no CT Insider logo após o apito final.
       </p>
     </article>
+
+    <!-- OUTRAS NOTÍCIAS -->
+    <aside class="outras-noticias">
+      <h2>Outras notícias</h2>
+
+      <div class="item-ranking">
+        <a href="../noticias/dona.html" class="noticia" data-tags="Donnarumma PSG">
+          <img src="../../imgs/noticias/donar.jpg" alt="Donnarumma" />
+          <div class="texto-ranking">
+            <span class="categoria">DONNARUMMA SOBRE MBAPPÉ</span>
+            <p>Donnarumma fala sobre momento do PSG desde saída de Mbappé: 'Somos uma equipe melhor'</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="item-ranking">
+        <a href="../noticias/raphinha.html" class="noticia" data-tags="Raphinha o melhor">
+          <img src="../../imgs/noticias/rapha.png" alt="Raphinha" />
+          <div class="texto-ranking">
+            <span class="categoria destaque">RAPHINHA O MELHOR</span>
+            <p>Raphinha é eleito o melhor jogador do Campeonato Espanhol 2024/25</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="item-ranking">
+        <a href="../noticias/foradosgramados.html" class="noticia" data-tags="Mudryk doping">
+          <img src="../../imgs/noticias/mudryyk.png" alt="Mudryk doping" />
+          <div class="texto-ranking">
+            <span class="categoria">MUDRYK FORA?</span>
+            <p>Atacante do Chelsea é acusado de doping e pode ficar quatro anos afastado dos gramados</p>
+          </div>
+        </a>
+      </div>
+    </aside>
   </div>
 
-  <!-- MODAL -->
-  <div id="modal-container"></div>
-
+  <!-- FOOTER -->
   <footer>
     <div class="redes-sociais">
       <nav>
@@ -112,8 +110,34 @@
         </ul>
       </nav>
     </div>
+
+    <button id="abrir-contato" class="btn-contato">Contato</button>
+
+    <!-- MODAL -->
+    <div id="modal-contato" class="modal">
+      <div class="modal-conteudo">
+        <span class="fechar-modal" id="fechar-modal">&times;</span>
+        <h2>Fale Conosco</h2>
+        <form id="form-contato">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+          <button type="submit" class="btn-enviar">Enviar</button>
+        </form>
+      </div>
+    </div>
+
     <p>&copy; Copyright 2000-2025 CT Insider.</p>
   </footer>
+
+  <!-- SCRIPT -->
+  <script src="../../scripts/modal.js"></script>
 </body>
 
 </html>
