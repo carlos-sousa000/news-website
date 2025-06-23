@@ -2,7 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const nomeUsuarioLink = document.getElementById("nome-usuario");
   const iconeUsuario = document.getElementById("icone-usuario");
   const nomeTexto = document.getElementById("nome-texto");
-
+  let path = window.location.pathname.includes("/pags/")
+  ? "forms/cadastro.html"
+  : "./pags/forms/cadastro.html";
   function atualizarMenu() {
     const nomeSalvo = localStorage.getItem("nome");
 
@@ -29,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
       //window.location.href = "pags/conta.html";
       window.location.href = "#";
     } else {
-      window.location.href = "pags/forms/cadastro.html";
+      window.location.href = path;
     }
   });
 });
